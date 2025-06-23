@@ -1,0 +1,50 @@
+/*
+File: style.css
+GUI Assignment: Creating an Interactive Dynamic Table
+Salwan Sabil, UMass Lowell Computer Science, salwan_sabil@student.uml.edu
+Copyright (c) 2025 by Salwan. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by SS on June 22, 2025 at 4:30 PM
+*/
+/*container scroll*/
+#tableContainer {
+  max-height: 500px;
+  overflow: auto;
+}
+/*table headers*/
+.table thead th {
+  position: sticky;
+  top: 0;
+  background-color: #003366;
+  color: white;
+  z-index: 2;
+}
+/*first column*/
+.table tbody th {
+  position: sticky;
+  left: 0;
+  background-color: #336699;
+  color: white;
+  z-index: 1;
+}
+/*alternating color for readability*/
+.table tbody tr:nth-child(even) td {
+  background-color: #e6f0ff;
+}
+
+.table tbody td:hover {
+  background-color: #d0e0f0;
+}
+/*table borders*/
+.table-bordered {
+  border: 1px solid #ccc;
+}
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid #ccc;
+}
+/*create some space for the sliders*/
+#tableInput .ui-slider {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,112 @@
+<!--
+File: index.html
+GUI Assignment: Creating an Interactive Dynamic Table
+Salwan Sabil, UMass Lowell Computer Science, salwan_sabil@student.uml.edu
+Copyright (c) 2025 by Salwan. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by SS on June 22, 2025 at 4:30 PM
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dynamic Table</title>
+    <meta charset="utf-8">
+    <link href="css/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/smoothness/jquery-ui.css">
+</head>
+
+<body>
+    <h1 style="text-align: center;">Dynamic Table</h1>
+    <br>
+
+
+    <div class="container">
+
+        <form id="tableInput" novalidate>
+
+            <div class="row">
+            <div class="col-md-5">
+                Enter Minimum Value for Multiplicand:
+            </div>
+
+            <div class="col-md-auto">
+                <input type="number" id="multiplicandMin" name="multiplicandMin" required>
+                <div id="slider-multiplicandMin"></div>
+            </div>
+
+            </div>
+
+            <br>
+
+            <div class="row">
+            <div class="col-md-5">
+                Enter Maximum Value for Multiplicand:
+            </div>
+
+            <div class="col-md-auto">
+                <input type="number" id="multiplicandMax" name="multiplicandMax" required>
+                <div id="slider-multiplicandMax"></div>
+            </div>
+
+            </div>
+
+            <br>
+
+            <div class="row">
+            <div class="col-md-5">
+                Enter Minimum Value for Multiplier:
+            </div>
+
+            <div class="col-md-auto">
+                <input type="number" id="multiplierMin" name="multiplierMin" required>
+                <div id="slider-multiplierMin"></div>
+            </div>
+
+            </div>
+
+            <br>
+
+            <div class="row">
+                <div class="col-md-5">
+                    Enter Maximum Value for Multiplier:
+                </div>
+
+                <div class="col-md-auto">
+                    <input type="number" id="multiplierMax" name="multiplierMax" required>
+                    <div id="slider-multiplierMax"></div>
+                </div>
+
+        </div>
+
+        <div class="col-md-12 text-center mt-3">
+            <button class="btn btn-primary" type="submit">Save Multiplication Table</button>
+        </div>
+
+        <div id="errorBox" class="text-danger mt-2"></div>
+    </form>
+    <div id="tableContainer" class="table-responsive mt-4"></div>
+    <hr>
+
+    <h3 class="text-center mt-4">Created Tables</h3>
+    <!--jQuery tabs-->
+    <div id="myTabs">
+        <ul id="tabsList"></ul>
+    </div>
+
+        <!--delete buttons will show under tabs-->
+        <div class="text-center mt-3">
+            <label><input type="checkbox" id="selectMultiple"> Delete one or more tabs</label>
+            <button id="deleteTabsBtn" class="btn btn-danger btn-sm ms-2">DELETE SELECTED TABS</button>
+        </div>
+    </div>
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+      <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+      <script src= "js/chart.js"></script>
+
+</body>
+
+</html>
